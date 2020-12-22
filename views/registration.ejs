@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./include/head.ejs') %>
+  
+  <body>
+    <!-- include the navigation partial -->
+    <%- include('./include/navbar.ejs') %>
+
+      <div class="uk-container">
+        <div class="uk-card uk-card-default uk-card-body">
+          <h1 class="uk-heading-small uk-center-top">Create a new post</h1>
+          <form method="POST" action="new-post">
+            <fieldset class="uk-fieldset">
+              <legend class="uk-legend">Title</legend>
+              <div class="uk-margin">
+                <input class="uk-input" name="fullname" type="text" placeholder="Enter first and  last name">
+              </div>
+              <legend class="uk-legend">Body</legend>
+              <div class="uk-margin">
+                <input class="uk-textarea" name="email" type=email rows="5" placeholder="Enter to email">
+              </div>
+              <legend class="uk-legend">Password</legend>
+              <div class="uk-margin">
+                <input class="uk-textarea" name="Password" type="password" rows="5" placeholder="Enter your password">
+              </div>
+              <div class="uk-margin">
+                <button type="submit" class="uk-button  button-primary">Register</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+      </div>
+  </body>
+
+</html>

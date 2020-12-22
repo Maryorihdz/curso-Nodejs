@@ -8,11 +8,15 @@ export const renderBlog = (req, res) => {
   
   }
 
-export const post = (req, res) => {
+export const newPost = (req, res) => {
   const  postRecibido = new Post({ title: req.body.title,  body: req.body.body})
   postRecibido.save((err) => {
-   res.redirect('/');
+   res.redirect('/blog');
   })
 }
 
-export default  {renderBlog, post}
+export const renderNewPost = (req, res) => {
+   res.render('new-post.ejs', {path:"New Post"});
+}
+
+export default  {renderBlog, newPost, renderNewPost}
