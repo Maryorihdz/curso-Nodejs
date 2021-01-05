@@ -8,6 +8,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.get('/', controller.renderBlog); //definimos primer metodo get
 router.post('/new-Post', controller.newPost)
 router.get('/new-Post', controller.renderNewPost)
+router.get("/detail/:id",controller.detail)
 
 export default  router
 

@@ -15,8 +15,15 @@ export const newPost = (req, res) => {
   })
 }
 
+export const detail = (req, res) => { 
+  Post.findById(req.params.id, (err, post) => {
+    res.render('post-detail.ejs', {path:"Post Detail", post: post})
+  })
+
+}
+
 export const renderNewPost = (req, res) => {
    res.render('new-post.ejs', {path:"New Post"});
 }
 
-export default  {renderBlog, newPost, renderNewPost}
+export default  {renderBlog, newPost, renderNewPost, detail}
